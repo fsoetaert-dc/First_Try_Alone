@@ -14,6 +14,7 @@ public class School
         {
             if (student.Name == name)
             {
+                if (student.CoursesAndScoresDict.Count == 0) throw new Exception($"Student {name} heeft nog geen scores");
                 return (name, student.CoursesAndScoresDict);
             }
 

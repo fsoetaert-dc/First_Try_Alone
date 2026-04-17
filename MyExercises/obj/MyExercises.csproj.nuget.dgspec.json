@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\frede\\First_Try\\Myexercises\\MyExercises.csproj": {}
+    "C:\\Users\\frede\\First_Try\\MyExercises\\MyExercises.csproj": {}
   },
   "projects": {
-    "C:\\Users\\frede\\First_Try\\Myexercises\\MyExercises.csproj": {
+    "C:\\Users\\frede\\First_Try\\MyExercises\\MyExercises.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\frede\\First_Try\\Myexercises\\MyExercises.csproj",
+        "projectUniqueName": "C:\\Users\\frede\\First_Try\\MyExercises\\MyExercises.csproj",
         "projectName": "MyExercises",
-        "projectPath": "C:\\Users\\frede\\First_Try\\Myexercises\\MyExercises.csproj",
+        "projectPath": "C:\\Users\\frede\\First_Try\\MyExercises\\MyExercises.csproj",
         "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\frede\\First_Try\\Myexercises\\obj\\",
+        "outputPath": "C:\\Users\\frede\\First_Try\\MyExercises\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,6 +42,24 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
