@@ -67,9 +67,20 @@ public class TestCases
         var student = school.listStudents.First();
         student.AddCourseWithScore("Wiskunde", 60);
         student.AddCourseWithScore("Frans", 80);
-        var (naam, dict) = School().GetStudentNameAndScores(student.Name);
+        var (naam, dict) = school.GetStudentNameAndScores(student.Name);
         var dictexpected = new Dictionary<string, int> { ["Wiskunde"] = 60, ["Frans"] = 80 };
         Assert.Equal("Patrick", naam);
         Assert.Equal(dictexpected, dict);
+    }
+
+
+    [Fact]
+    public void CheckStudentWithoutScores()
+    {
+        var school = new School();
+        school.RegisterStudent("Patrick", 5);
+        var student = school.listStudents.First();
+        var ex = Assert.Throws<Exception>(() => school.GetStudentNameAndScores(student.Name));
+        Assert.Equal("Student Patrick heeft nog geen scores", ex.Message);
     }
 }
