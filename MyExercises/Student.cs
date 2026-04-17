@@ -31,6 +31,14 @@ public class Student
         CoursesAndScoresDict.Add(course, score);
     }
 
+    public double MeanScore()
+    {
+        double totalScore = 0;
 
+        if (CoursesAndScoresDict.Count == 0) throw new Exception("Student has no scores");
+
+        foreach (var key in CoursesAndScoresDict.Keys) totalScore += CoursesAndScoresDict[key];
+        return totalScore / CoursesAndScoresDict.Count;
+    }
 
 }

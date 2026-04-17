@@ -83,4 +83,45 @@ public class TestCases
         var ex = Assert.Throws<Exception>(() => school.GetStudentNameAndScores(student.Name));
         Assert.Equal("Student Patrick heeft nog geen scores", ex.Message);
     }
+
+    [Fact]
+    public void CheckMeanScore()
+    {
+        var student = new Student("Patrick", 5);
+        student.AddCourseWithScore("Wiskunde", 60);
+        student.AddCourseWithScore("Frans", 80);
+        Assert.Equal(70.00, student.MeanScore());
+    }
+
+    [Fact]
+    public void CheckMeanScoreWithoutScore()
+    {
+        var student = new Student("Patrick", 5);
+        var ex = Assert.Throws<Exception>(() => student.MeanScore());
+        Assert.Equal("Student has no scores", ex.Message);
+    }
+
+    [Fact]
+    public void CheckStudentList()
+    {
+        var school = new School();
+        school.RegisterStudent("Patrick", 5);
+        school.RegisterStudent("Emily", 10);
+        school.RegisterStudent("Sandy", 55);
+        var expectedList = new List<Student>
+        {
+        new Student("Patrick", 5),
+        new Student("Emily", 10),
+        new Student("Sandy", 55)
+        };
+        Assert.Equal(expectedList, school.listStudents);
+    }
+
+    [Fact]
+    public void CheckStudentListEmpty()
+    {
+        var school = new School();
+        var expectedList = new List<Student> { };
+        Assert.Equal(expectedList, school.listStudents);
+    }
 }
