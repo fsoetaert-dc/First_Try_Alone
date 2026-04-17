@@ -1,0 +1,14 @@
+C:\Users\frede\First_Try\Myexercises\bin\Debug\net8.0\MyExercises.exe
+C:\Users\frede\First_Try\Myexercises\bin\Debug\net8.0\MyExercises.deps.json
+C:\Users\frede\First_Try\Myexercises\bin\Debug\net8.0\MyExercises.runtimeconfig.json
+C:\Users\frede\First_Try\Myexercises\bin\Debug\net8.0\MyExercises.dll
+C:\Users\frede\First_Try\Myexercises\bin\Debug\net8.0\MyExercises.pdb
+C:\Users\frede\First_Try\Myexercises\obj\Debug\net8.0\MyExercises.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frede\First_Try\Myexercises\obj\Debug\net8.0\MyExercises.AssemblyInfoInputs.cache
+C:\Users\frede\First_Try\Myexercises\obj\Debug\net8.0\MyExercises.AssemblyInfo.cs
+C:\Users\frede\First_Try\Myexercises\obj\Debug\net8.0\MyExercises.csproj.CoreCompileInputs.cache
+C:\Users\frede\First_Try\Myexercises\obj\Debug\net8.0\MyExercises.dll
+C:\Users\frede\First_Try\Myexercises\obj\Debug\net8.0\refint\MyExercises.dll
+C:\Users\frede\First_Try\Myexercises\obj\Debug\net8.0\MyExercises.pdb
+C:\Users\frede\First_Try\Myexercises\obj\Debug\net8.0\MyExercises.genruntimeconfig.cache
+C:\Users\frede\First_Try\Myexercises\obj\Debug\net8.0\ref\MyExercises.dll
