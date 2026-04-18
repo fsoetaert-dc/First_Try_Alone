@@ -35,7 +35,7 @@ public class Student
     {
         double totalScore = 0;
 
-        if (CoursesAndScoresDict.Count == 0) throw new Exception("Student has no scores");
+        if (CoursesAndScoresDict.Count == 0) return 0;
 
         foreach (var key in CoursesAndScoresDict.Keys) totalScore += CoursesAndScoresDict[key];
         return totalScore / CoursesAndScoresDict.Count;

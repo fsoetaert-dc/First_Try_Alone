@@ -97,8 +97,7 @@ public class TestCases
     public void CheckMeanScoreWithoutScore()
     {
         var student = new Student("Patrick", 5);
-        var ex = Assert.Throws<Exception>(() => student.MeanScore());
-        Assert.Equal("Student has no scores", ex.Message);
+        Assert.Equal(0, student.MeanScore());
     }
 
     [Fact]
@@ -123,5 +122,11 @@ public class TestCases
         var school = new School();
         var expectedList = new List<Student> { };
         Assert.Equal(expectedList, school.listStudents);
+    }
+
+    [Fact]
+    public void CheckHonoraryList()
+    {
+        return;
     }
 }

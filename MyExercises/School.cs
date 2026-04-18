@@ -22,21 +22,16 @@ public class School
         throw new IndexOutOfRangeException("Student niet geregistreerd");
     }
 
-    public double MeanScore(string name)
+    public List<(Student, double)> MeanScoreStudentsList = [];
+    public List<(Student, double)> HonoraryList(List<Student> listStudents, int amount)
     {
-        int total = 0;
         foreach (var student in listStudents)
         {
-            if (student.Name == name)
-            {
-                foreach (var key in student.CoursesAndScoresDict.Keys)
-                {
-                    total += student.CoursesAndScoresDict[key];
-                }
-            }
-            return total / student.CoursesAndScoresDict.Count;
+            var mean = student.MeanScore();
+            MeanScoreStudentsList.Add((student, mean));
         }
-        throw new Exception("Student not in list)");
+        MeanScoreStudentsList.Sort((a, b) => b.CompareTo(a));
+        return MeanScoreStudentsList.GetRange(0, amount);
 
     }
 }
