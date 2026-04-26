@@ -16,4 +16,4 @@ public class Dog : Animal
 }
 
 // inheritance lets one class (the derived/subclass) reuse and extend another class’s (the base/superclass) members (like properties/fields/methods...)
-// here is Animal the superclass and Dog the subclass
+// here is Animal the superclass and Dog the subclass, a class can only have 1 superclass

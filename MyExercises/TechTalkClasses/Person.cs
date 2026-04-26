@@ -5,11 +5,14 @@ namespace MyExercises.TechTalkClasses;
 
 public class Person // name of the class
 {
-    private string species = "Homo Sapiens"; // private field (field is just a term for something you give a value inside a class)
+    private static string species = "Homo Sapiens"; // private field (field is just a term for something you give a value inside a class)
     // private can only be accessed by the class itself 
     // the convention is that fields have a low case letter
+    //static means every object has the same value for this, it is 1 copy shared by all objects created
+    // an object is for example var person1 = new Person("Bert", 45)
+    // the opposite of static is instanced (this is the default)
 
-    public string job = "programmer"; // public field
+    public string job = "programmer"; // public (instanced) field
     // public can also be accessed by other classes
 
     public int sickScore = 0;
