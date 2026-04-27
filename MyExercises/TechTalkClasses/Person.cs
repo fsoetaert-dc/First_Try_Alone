@@ -27,6 +27,7 @@ public class Person // name of the class
     public Person(string name, int age) // example of a normal/traditional constructor
     //  name and age are parameters of the constructor
     // string and int are the types of the parameters
+    // to make a new object of the class Person: var person1 = new Person("Sophie, 30);
     {
         Name = name; // Person.Name gets the value of name
         Age = age; // Person.Age gets the value of age

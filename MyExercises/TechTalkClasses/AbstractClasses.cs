@@ -6,8 +6,12 @@ public abstract class Animal
 {
     public abstract void Speak();            // abstract means it must be implemented by a subclass
     // if you want to give a default use: public virtual void speak() => console.WriteLine("Animalnoise")
-    public void Eat() => Console.WriteLine("Eating"); // shared implementation
-
+    public void Eat()
+    {
+        Console.WriteLine("Eating"); // shared implementation
+        // animal happy so :
+        Speak();
+    }
 }
 
 public class Dog : Animal

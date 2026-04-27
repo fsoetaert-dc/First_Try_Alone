@@ -11,7 +11,6 @@ public class Hospital
     // and person is the parameter that the constructor uses
     // person could've also been named human or animal or whatever. 
     // person was just the most obvious name in this context. it doesn't have to have the same name of the type.
-    // if you call the methode eg: var person1 = new Person("Sarah", 50)
     // Sarah and 60 are called arguments
     // person1 is called an object (can also be called an instance ><not to be confused with instanced members of a class)
     {
