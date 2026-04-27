@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\frede\\all the shizzle of code\\First_Try\\MyExercises\\MyExercises.csproj": {}
+    "C:\\Users\\frede\\all the shit of code\\First_Try_Alone\\MyExercises\\MyExercises.csproj": {}
   },
   "projects": {
-    "C:\\Users\\frede\\all the shizzle of code\\First_Try\\MyExercises\\MyExercises.csproj": {
+    "C:\\Users\\frede\\all the shit of code\\First_Try_Alone\\MyExercises\\MyExercises.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\frede\\all the shizzle of code\\First_Try\\MyExercises\\MyExercises.csproj",
+        "projectUniqueName": "C:\\Users\\frede\\all the shit of code\\First_Try_Alone\\MyExercises\\MyExercises.csproj",
         "projectName": "MyExercises",
-        "projectPath": "C:\\Users\\frede\\all the shizzle of code\\First_Try\\MyExercises\\MyExercises.csproj",
+        "projectPath": "C:\\Users\\frede\\all the shit of code\\First_Try_Alone\\MyExercises\\MyExercises.csproj",
         "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\frede\\all the shizzle of code\\First_Try\\MyExercises\\obj\\",
+        "outputPath": "C:\\Users\\frede\\all the shit of code\\First_Try_Alone\\MyExercises\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config"
