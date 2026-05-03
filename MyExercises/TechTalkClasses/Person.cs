@@ -7,26 +7,29 @@ public class Person // name of the class
 {
     private static string species = "Homo Sapiens"; // private field (field is just a term for something you give a value inside a class)
     // private can only be accessed by the class itself 
+    // the opposite of private is public
     // the convention is that fields have a low case letter
-    //static means every object has the same value for this, it is 1 copy shared by all objects created
+    // static means every object has the same value for this, it is 1 copy shared by all objects created
     // an object is for example var person1 = new Person("Bert", 45)
     // the opposite of static is instanced (this is the default)
 
     public string job = "programmer"; // public (instanced) field
     // public can also be accessed by other classes
 
-    public int sickScore = 0;
+    public int sickScore = 0; // question, what is this based on previous information?
 
-    public string Name { get; private set; } = ""; // public property (a property is something you can call on (get) and give a value(set))
+    public string Name { get; private set; } = ""; // public property (property is a term for something you can call on (get) and give a value(set))
     // =""; means that Name gets a empty string as a default value
+    // Private set means that only the class can set the value of Name.
     // the convention is that properties have a Capital case
     public int Age { get; private set; } = 0; // Age gets a default value of 0
 
     public Person(string name, int age) // example of a normal/traditional constructor
     //  name and age are parameters of the constructor
     // string and int are the types of the parameters
+    // to make a new object of the class Person: var person1 = new Person("Sophie, 30);
     {
-        Name = name;
-        Age = age;
+        Name = name; // Person.Name gets the value of name
+        Age = age; // Person.Age gets the value of age
     }
 }
