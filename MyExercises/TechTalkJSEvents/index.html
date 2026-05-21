@@ -1,74 +1,71 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Buttons</title>
   <style>
-  /* CSS gedeelte */
-    body { font-family: system-ui, sans-serif; padding: 2rem; }
+    /* CSS gedeelte */
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 2rem;
+    }
+
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: .5rem;           
+      gap: .5rem;
       align-items: flex-start;
-      border-style: solid ;
+      border-style: solid;
     }
+
     .buttons button {
       width: auto;
       align-self: flex-start;
     }
-    
   </style>
   <!-- HTML gedeelte -->
 </head>
+
 <body>
   <h1>Buttons</h1>
   <div class="buttons">
     <button id="timebutton" onclick="displayDate()">Get the time</button>
-    <p id = "tijd"></p>
+    <p id="tijd"></p>
     <button id="hoverbutton" onmouseover="changeText()" onmouseleave="resetText()">Hover over me</button>
     <button id="areaButton">Touch me pls</button>
     <button id="btn4">I read key inputs</button>
-    <button id="btn5">Button 5</button>
-    <button id="btn6">Button 6</button>
+    <button id="btn5">Press N in emergencies</button>
+    <p id="textNukes"></p>
+    <button id="btn6">A</button>
     <button id="btn7">Button 7</button>
-    <button id="btn8">Button 8</button>
-    <button id="btn9">Button 9</button>
-    <button id="btn10">Button 10</button>
-    <select id="color">
-      <option value="">Choose</option>
-      <option value="red">Red</option>
-      <option value="green">Green</option>
-      <option value="blue">Blue</option>
-    </select>
+
   </div>
 
   <!-- javascript gedeelte -->
   <script>
     // als je btn1 clickt, wordt deze functie aangeroepen
-    function displayDate() {  
+    function displayDate() {
       document.getElementById("tijd").innerHTML = Date();
     }
     //verandert de tekst als je over de hoverbutton hovert
-    function changeText() {  
+    function changeText() {
       document.getElementById("hoverbutton").textContent = "DON'T HOVER OVER ME!";
     }
     // reset de tekst als je stopt met hoveren over de hoverbutton
-    function resetText(){
+    function resetText() {
       document.getElementById("hoverbutton").textContent = "Hover over me";
     }
 
     //als de muis de border van .buttons binnenkomt, verandert de tekst van button3.
-    document.querySelector(".buttons").addEventListener('mouseout', (e) => 
-    { document.getElementById("areaButton").textContent = "Touch my space" });
-    document.querySelector(".buttons").addEventListener('mouseover', (e) => 
-    { document.getElementById("areaButton").textContent = "Me gusta!" });
-    
+    document.querySelector(".buttons").addEventListener('mouseout', (e) => { document.getElementById("areaButton").textContent = "Touch my space" });
+    document.querySelector(".buttons").addEventListener('mouseover', (e) => { document.getElementById("areaButton").textContent = "Me gusta!" });
+
     //als de muis geklikt heeft op een button, zal btn4 de neergedrukte key weergeven
-    document.querySelector(".buttons").addEventListener('keydown', (e) => 
-    {console.log('key:', e.key); document.getElementById("btn4").textContent = e.key;});
-    
+    // console.log
+    document.querySelector(".buttons").addEventListener('keydown', (e) => { console.log('key:', e.key); document.getElementById("btn4").textContent = e.key; });
+
     //https://www.w3schools.com/jsref/dom_obj_event.asp veel andere event objects
 
     // Waarom addEventListener gebruiken? 
@@ -81,10 +78,35 @@
     // <button id="hoverbutton" >Hover over me</button>
 
     //dit in scripts gedeelte
-    //document.querySelector("#timebutton").addEventListener("click", function() {document.getElementById("tijd").innerHTML = Date()});
+    //document.querySelector("#timebutton").addEventListener("click", (e) => {document.getElementById("tijd").innerHTML = Date()});
 
+    //als een specifieke toets in wordt gedrukt, verschijnt er een message.
+    document.querySelector(".buttons").addEventListener('keydown', (e) => { if (e.key == "N") document.getElementById("textNukes").textContent = "Nukes have been launched"; });
 
+    //A wordt standaard getoond, toggleOnce() zegt als het A toont, toon B en omgekeerd
+    let showingA = true;
+    let intervalId = null;
+    function toggleOnce() {
+      showingA = !showingA;
+      btn6.textContent = showingA ? 'A' : 'B';
+    }
+
+    // als de btn6 geklikt wordt, reset de intervalId
+    document.getElementById("btn6").addEventListener('click', () => {
+      if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+      } else {
+        toggleOnce();
+        intervalId = setInterval(toggleOnce, 2000);
+      }
+    });
+
+    let btn7 = document.getElementById("btn7")
+
+    btn7.addEventListener("click", (e) => alert("Aanschouw mijn alert!"));
 
   </script>
 </body>
+
 </html>
